@@ -14,7 +14,7 @@ export const useGetStudentDetail = (id: string | undefined) => {
       try {
         const result = await getStudentDetail(id).unwrap();
         if (result) {
-          setStudent(result);
+          setStudent(result); 
         }
       } catch (error) {
         console.log(error);

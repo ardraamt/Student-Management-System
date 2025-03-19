@@ -29,11 +29,11 @@ export const ListStudents: React.FC = () => {
 
   const [filter, setFilter] = React.useState<StudentFilter>({});
   const { data, isLoading, isError, error } = useGetStudentsQuery(filter);
+  console.log("student-data", data)
 
   const searchStudent = (payload: StudentFilter) => {
     setFilter(payload);
   };
-
   return (
     <>
       <Box sx={{ display: 'flex', mb: 1 }}>
@@ -53,6 +53,7 @@ export const ListStudents: React.FC = () => {
       <FilterStudent methods={methods} searchStudent={methods.handleSubmit(searchStudent)} />
       <Box sx={{ my: 10 }} />
       <PageContentHeader icon={<InfoOutlined sx={{ mr: 1 }} />} heading='Student Information' />
+      
       <UserAccountBasic
         data={{
           userType: 'student',
@@ -63,5 +64,6 @@ export const ListStudents: React.FC = () => {
         }}
       />
     </>
+    
   );
 };

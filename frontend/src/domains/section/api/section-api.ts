@@ -45,5 +45,5 @@ export const {
   useGetSectionQuery,
   useUpdateSectionMutation,
   useDeleteSectionMutation,
-  useAddNewSectionMutation
+  useAddNewSectionMutation,
 } = sectionApi;
