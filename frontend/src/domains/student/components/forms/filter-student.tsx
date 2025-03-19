@@ -36,6 +36,7 @@ export const FilterStudent: React.FC<FilterStudentProps> = ({ methods, searchStu
     } else {
       setSections([]);
     }
+    console.log("classes", classes)
   };
 
   return (
@@ -62,7 +63,7 @@ export const FilterStudent: React.FC<FilterStudentProps> = ({ methods, searchStu
                   }}
                 >
                   {classResult?.classes?.map((c) => (
-                    <MenuItem key={c.id} value={c.id.toString()}>
+                    <MenuItem key={c.id} value={c.name.toString()}>
                       {c.name}
                     </MenuItem>
                   ))}
