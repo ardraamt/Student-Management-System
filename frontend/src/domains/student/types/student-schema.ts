@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
 export const StudentFilterSchema = z.object({
-  class: z.string().optional(),
+  className: z.string().optional(),
   section: z.string().optional(),
   name: z.string().optional(),
   roll: z.string().optional()
